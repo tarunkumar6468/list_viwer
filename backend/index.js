@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 app.use(cors());
@@ -23,7 +24,7 @@ app.get("/api/candidates", (req, res) => {
     res.json(candidates);
 });
 
-const PORT = 5000;
+
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
