@@ -7,7 +7,7 @@ const CandidateList = () => {
     const [sortOrder, setSortOrder] = useState("asc");
 
     useEffect(() => {
-        axios.get("http://localhost:5000/api/candidates")
+        axios.get("https://list-viwer-1.onrender.com/api/candidates")
             .then((response) => setCandidates(response.data))
             .catch((error) => console.error("Error fetching data:", error));
     }, []);
@@ -64,6 +64,7 @@ const CandidateList = () => {
             </table>
         </div>
     );
+
 };
 
 export default CandidateList;
