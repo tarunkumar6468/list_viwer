@@ -7,7 +7,7 @@ const CandidateList = () => {
     const [sortOrder, setSortOrder] = useState("asc");
 
     useEffect(() => {
-        axios.get("https://list-viwer-1.onrender.com/api/candidates")
+        axios.get("http://localhost:5000/api/candidates")
             .then((response) => setCandidates(response.data))
             .catch((error) => console.error("Error fetching data:", error));
     }, []);
@@ -26,7 +26,7 @@ const CandidateList = () => {
         }
     });
 
-    // Toggle between ascending and descending order
+    
     const handleSort = () => {
         setSortOrder(sortOrder === "asc" ? "desc" : "asc");
     };
